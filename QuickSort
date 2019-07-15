@@ -1,0 +1,33 @@
+public class QuickSort {
+    private static Comparable[] array = {2,8,4,7,1,5,9,3,6};
+
+    public static void main(String[] args) {
+        QuickSort qsort = new QuickSort();
+        qsort.sort(array, 0, array.length-1);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public void sort(Comparable[] arr, int a, int b) {
+        if (a < b) {
+            int i = a, j = b;
+            Comparable x = arr[(i + j) / 2];
+
+            do {
+                while (arr[i].compareTo(x) < 0) i++;
+                while (x.compareTo(arr[j]) < 0) j--;
+
+                if ( i <= j) {
+                    Comparable tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                    i++;
+                    j--;
+                }
+
+            } while (i <= j);
+
+            sort(arr, a, j);
+            sort(arr, i, b);
+        }
+    }
+}
