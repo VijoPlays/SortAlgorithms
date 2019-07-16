@@ -1,1 +1,1 @@
-I'll make a guide for the algorithms and post the playlist here, in case anything is slightly unclear.
+Vidya guide for those that want a bit more explanation to the code: https://www.youtube.com/playlist?list=PL-5SmJl-CNIaES8W8G4XLWgpa7s2jvsJa
