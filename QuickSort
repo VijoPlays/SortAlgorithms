@@ -1,5 +1,9 @@
+package de.hhn.mib.ald1.sortverfahren;
+
+import java.util.Arrays;
+
 public class QuickSort {
-    private static Comparable[] array = {2,8,4,7,1,5,9,3,6};
+    private static Comparable[] array = {5,8,4,7,1,5,9,3,6};
 
     public static void main(String[] args) {
         QuickSort qsort = new QuickSort();
@@ -7,9 +11,9 @@ public class QuickSort {
         System.out.println(Arrays.toString(array));
     }
 
-    public void sort(Comparable[] arr, int a, int b) {
-        if (a < b) {
-            int i = a, j = b;
+    public void sort(Comparable[] arr, int low, int high) {
+        if (low < high) {
+            int i = low, j = high;
             Comparable x = arr[(i + j) / 2];
 
             do {
@@ -26,8 +30,15 @@ public class QuickSort {
 
             } while (i <= j);
 
-            sort(arr, a, j);
-            sort(arr, i, b);
+            //! Remove comments if you want to understand the code better, or watch the video in the Readme
+
+            //for(int k =0; k<array.length;k++){
+            //    System.out.print(array[k] + ", ");
+            //}
+            //System.out.println();
+
+            sort(arr, low, j);
+            sort(arr, i, high);
         }
     }
 }
