@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class InsertionSort{
     private static Comparable[]array = {12,13,24,10,3,6,90,70};
 
