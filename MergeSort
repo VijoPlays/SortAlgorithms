@@ -1,3 +1,7 @@
+package de.hhn.mib.ald1.sortverfahren;
+
+import java.util.*;
+
 public class MergeSort {
     private static Comparable[] array = {47, 27, 19, 64, 13, 33, 11, 7, 6, 9};
 
@@ -17,6 +21,19 @@ public class MergeSort {
         Comparable[] second = new Comparable[list.length - first.length];
         System.arraycopy(list, 0, first, 0, first.length);
         System.arraycopy(list, first.length, second, 0, second.length);
+
+        //! Remove the comments here to understand the code a bit better, by showing you how the algorithm iterates... or by clicking the video in the Readme, whichever you prefer.
+        
+        //System.out.print("First part: ");
+        //for(int i =0; i<first.length;i++){
+        //    System.out.print(first[i] + ", ");
+        //}
+        //System.out.println();
+        //System.out.print("Second part: ");
+        //for(int i =0; i<second.length;i++){
+        //    System.out.print(second[i] + ", ");
+        //}
+        //System.out.println();
 
         sort(first);
         sort(second);
