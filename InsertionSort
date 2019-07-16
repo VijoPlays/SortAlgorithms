@@ -18,13 +18,11 @@ public class InsertionSort{
             j = i;
             while (j > fromIndex && ((Comparable) a[j - 1]).compareTo(d) > 0) {
                 a[j] = a[j - 1];
-                j--;
-            } //! Remove comment or go to the readMe to understand the code better
+                j--;}
+            a[j] = d; //! Remove comment or go to the readMe to understand the code better
             //for(int k=0;k<array.length; k++){
-            //        System.out.print(array[k] + ", ");
-            //    }
+            //    System.out.print(array[k] + ", ");}
             //System.out.println();
-            a[j] = d;
         }
     }
 }
