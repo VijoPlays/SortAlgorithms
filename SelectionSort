@@ -1,3 +1,7 @@
+package de.hhn.mib.ald1.sortverfahren;
+
+import java.util.Arrays;
+
 public class SelectionSort {
     private static Comparable[] array = {2,8,4,7,1,5,9,3,6};
 
@@ -8,21 +12,24 @@ public class SelectionSort {
     }
 
     public void sort(Comparable[] a) {
+        int n = a.length;
 
-        int N = a.length;
-
-        for (int i = 0; i < N; i++) {
-
+        for (int i = 0; i < n; i++) {
             int minIndex = i;
-            for (int j = i + 1; j < N; j++)
-                if (a[j].compareTo(a[minIndex]) < 0)
+            for (int j = i + 1; j < n; j++)
+                if (a[j].compareTo(a[minIndex]) < 0){
                     minIndex = j;
-
-            if (minIndex != i) {
+                }
+            if (minIndex != i){
                 Comparable temp = a[i];
                 a[i] = a[minIndex];
                 a[minIndex] = temp;
-            }
+            } //! Remove comments or go to the readMe to understand the algorithms better
+            
+            //for(int k =0; k<array.length;k++){
+            //    System.out.print(array[k] + ", ");
+            //}
+            //System.out.println();
         }
     }
 }
